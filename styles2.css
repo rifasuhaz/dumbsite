@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 :root{
   --ff: "Montserrat", sans-serif;
-  --h1: bold 54px/60px var(--ff);
-  --t1: bold 40px var(--ff);
+  --h1: bold 50px/54px var(--ff);
+  --t1: bold 35px var(--ff);
   --t2: bold 20px var(--ff);
 }
 

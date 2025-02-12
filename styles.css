@@ -2,6 +2,7 @@
 :root{
   --ff: "Montserrat", sans-serif;
   --h1: bold 54px/60px var(--ff);
+  --n1: bold 40px var(--ff);
 }
 
 body, html {
@@ -42,7 +43,7 @@ body, html {
 }
 
 .ques{
-    font: var(--h1);
+    font: var(--n1);
     cursor: pointer;
     color: #64948a;
 }
