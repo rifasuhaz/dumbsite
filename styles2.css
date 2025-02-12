@@ -8,7 +8,7 @@
 
 body, html {
     height: 100%;
-    margin-left: 35px;
+    margin-left: 20px;
     text-align: left;
     background-color: #1e1e1e;
 }
@@ -95,4 +95,14 @@ input[type="range"]::-moz-range-thumb {
     font-size: 20px;
     margin-top: 10px;
     font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .fill {
+        font-size: 25px; /* Smaller font size for mobile */
+    }
+
+    .text {
+        font-size: 20px; /* Smaller font size for headings on mobile */
+    }
 }
