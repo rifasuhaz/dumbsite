@@ -35,7 +35,7 @@ body, html {
     border: 2px solid #1e1e1e; 
     padding: 10px 20px; 
     font: var(--h1);
-    font-size: 20px;
+    font-size: 14px;
     color: #f9f9f9;
     cursor: pointer; 
     outline: none; 
@@ -60,3 +60,18 @@ body, html {
 .block-text {
     display: block;
 }
+
+input[type="text"] {
+    font-size: 28px;
+    padding: 10px;
+}
+
+  @media (max-width: 600px) {
+    input[type="text"] {
+      font-size: 14px; 
+      padding: 8px;    
+      width: 90%;    
+      max-width: 100%;
+    }
+  }
+
