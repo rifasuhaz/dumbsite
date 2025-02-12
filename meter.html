@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css" />
+    <title>dumbsite</title>
+</head>
+<body>
+    
+    <h1 class="fill">  dumb meter</h1>
+    <br><br><br><br><br><br>
+    <h2 class="text">so, hey <p class="fill" id="name"></p></h2>
+
+    <input type="range" id="mySlider" min="0" max="100" value="0">
+    <p class="text">You are <span id="sliderValue"></span> % dumb</p>
+    <p id="message" class="text2"> 🎉 ye, you are dumb for sure</p>
+
+    <!-- <button class="no-fill-button" onclick="showMessage()"></button>  -->
+    <script>
+        function showMessage() {
+            alert("You ARE Dumb")
+        ;}
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const name = urlParams.get('name');
+            if (name) {
+                document.getElementById("name").innerText = decodeURIComponent(name);
+            } else {
+                document.getElementById("name").innerText = "guest"; // Default text if no name parameter
+            }
+        });
+        const slider = document.getElementById('mySlider');
+        const sliderValue = document.getElementById('sliderValue');
+
+        slider.oninput = function() {
+            sliderValue.textContent = this.value;
+        };
+        function updateSlider() {
+            const value = slider.value;
+            sliderValue.textContent = value;
+            const percentage = (value - slider.min) / (slider.max - slider.min) * 100;
+            slider.style.background = `linear-gradient(to right, #64948a ${percentage}%, #ddd ${percentage}%)`;
+            if (value == 100) {
+                console.log(".");
+                message.style.display = "block"; 
+            } else {
+                message.style.display = "none";
+            }
+        }
+
+        updateSlider();
+
+        slider.addEventListener('input', updateSlider);
+    </script>
+</body>
+</html>
+
+
+
+
+

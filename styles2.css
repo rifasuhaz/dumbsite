@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+:root{
+  --ff: "Montserrat", sans-serif;
+  --h1: bold 54px/60px var(--ff);
+  --t1: bold 40px var(--ff);
+  --t2: bold 20px var(--ff);
+}
+
+body, html {
+    height: 100%;
+    margin-left: 35px;
+    text-align: left;
+    background-color: #1e1e1e;
+}
+
+.fill{
+  font: var(--h1);
+  cursor: pointer;
+  color: transparent;
+  -webkit-text-stroke-color: #f9f9f9;
+  -webkit-text-stroke-width: 1px;
+}
+.fill:hover {
+  color: #64948a;
+  transition: 0.3s ease-in-out;
+}
+
+.text{
+    font: var(--t1);
+    color: #fdfdfd;
+  }
+
+.text2{
+    font: var(--t2);
+    color: #64948a;
+  }
+
+.no-fill-button {
+    background-color: transparent;
+    border: 2px solid #1e1e1e; 
+    padding: 10px 20px; 
+    font: var(--h1);
+    font-size: 20px;
+    color: #f9f9f9;
+    cursor: pointer; 
+    outline: none; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.ques{
+    font: var(--h1);
+    cursor: pointer;
+}
+
+#name {
+    display: inline;
+}
+
+.block-text {
+    display: block;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+}
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #64948a;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #64948a;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#sliderValue {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
